@@ -1,0 +1,23 @@
+
+services:
+  model-api:
+    build:
+      context: .
+      dockerfile: model-api/Dockerfile
+    image: model-api:latest
+    container_name: model-api
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./model-api/pipeline.joblib:/app/pipeline.joblib
+
+  streamlit-web:
+    build:
+      context: .
+      dockerfile: streamlit-service/Dockerfile
+    image: streamlit-service:latest
+    container_name: streamlit-service
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./streamlit-service/streamlit_app.py:/app/streamlit_app.py
