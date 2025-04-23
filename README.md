@@ -10,7 +10,7 @@ docker compose up -d
 
 На `localhost:8501` находится веб-приложение:
 
-![gif](https://drive.google.com/file/d/1fCY6f46y_Fx4eSUJpwO0kuWyLGUQv9ef/view?usp=sharing)
+![gif](https://drive.google.com/uc?export=view&id=1fCY6f46y_Fx4eSUJpwO0kuWyLGUQv9ef)
 
 В качестве модели используется xgboost с предобработкой фичей (нормализация числовых и one hot категориальных). Обучение модели и анализ в `train.ipynb`
 
